@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search> 
+  
+  
+    
+    <entry>
+      <title>读书笔记《苏菲的世界》：伊甸园与魔术师的礼帽</title>
+      <link href="/2023/04/02/sophiesworld1/"/>
+      <url>/2023/04/02/sophiesworld1/</url>
+      
+        <content type="html"><![CDATA[<p>第一篇读书笔记来自于最近开始读的一本哲学启蒙书<strong>《苏菲的世界》</strong>。尽管里面的主人公苏菲的年龄也就十来岁的样子，但对于高中生的认知水平和理解能力是非常适合阅读的，<del>算是作者的一个很棒的设计</del>（很可能说明每个学生在接触哲学之前，由于与社会并没有过深的接触，对于世界的认知是接近于零的，说这本书适合所有的学生也不为过）。</p><p>这本书我将<strong>读两遍</strong>，第一遍记录下自己<strong>最初的理解</strong>，第二遍对记录<strong>稍加修改</strong>。</p><p>以下内容为第一次阅读时所作，言辞略显稚嫩，请多包涵。</p><h2 id="苏菲收到了一封奇怪的信……"><a href="#苏菲收到了一封奇怪的信……" class="headerlink" title="苏菲收到了一封奇怪的信……"></a>苏菲收到了一封奇怪的信……</h2><p>伊甸园和魔术师的礼帽是该书的前两章，大致从哲学是什么以及哲学家是什么这两个角度，以苏菲对来信的思考展开叙述。</p><p>每一个人类出生的时候都对世界充满着好奇心，婴儿挥舞着双手双脚，指着新奇的事物发出“唔噜”的声音；但学生及成年人身上就不会有这样的迹象。</p><p>无论是学生的学习还是成年人的工作，大多都是重复性极强的，持续的重复让人们形成习惯。习惯是琐碎的，习惯了世界的运转，也就失去了对世界的好奇心。重复的事情总有做完的那一天，就像学生走向社会、成年人退休以及人类最终的死亡，幸运的人在那时可能会重拾好奇心，但对于个体来说，如海一般的时间已然逝去，无法挽回；对于社会来说，它的可持续发展性是存疑的。</p><p>哲学家就是一群充满好奇心的人，他们自己探索世界的同时，也不忘记警示他人习以为常的危害。人人都应该成为自己的“哲学家”，多向世界问“为什么”，并尽心去回答。</p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 读书笔记 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 苏菲的世界 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>C++链表</title>
+      <link href="/2023/04/02/chain-node/"/>
+      <url>/2023/04/02/chain-node/</url>
+      
+        <content type="html"><![CDATA[<p>算是这个博客上第一篇OI学习笔记，由于并没有项目需求，所以是按最简易的办法编写的😁。</p><p>以姓名、年龄的链表为例。</p><p>首先是最简单的<strong>输入输出链表</strong>。</p><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;iostream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;fstream&gt;</span></span></span><br><span class="line"><span class="meta">#<span class="keyword">include</span> <span class="string">&lt;string&gt;</span></span></span><br><span class="line"><span class="keyword">using</span> <span class="keyword">namespace</span> std;</span><br><span class="line"><span class="type">int</span> N;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span>{</span><br><span class="line">string name;</span><br><span class="line"><span class="type">int</span> age;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span> *next;</span><br><span class="line">}*head=<span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="type">int</span> <span class="title">main</span><span class="params">()</span></span>{</span><br><span class="line">cin &gt;&gt;N;</span><br><span class="line"><span class="comment">//输入链表 </span></span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;N;i++){</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span> *p=<span class="keyword">new</span> <span class="keyword">struct</span> node;</span><br><span class="line">cin &gt;&gt;p-&gt;name;</span><br><span class="line">cin &gt;&gt;p-&gt;age;</span><br><span class="line">p-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line"><span class="keyword">if</span>(head==<span class="literal">NULL</span>){</span><br><span class="line">head=p;</span><br><span class="line">p-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line">}</span><br><span class="line"><span class="keyword">else</span>{</span><br><span class="line"><span class="keyword">struct</span> node *t;</span><br><span class="line"><span class="keyword">for</span>(t=head;t-&gt;next!=<span class="literal">NULL</span>;t=t-&gt;next);</span><br><span class="line">t-&gt;next=p;</span><br><span class="line">p-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line">}</span><br><span class="line">}</span><br><span class="line"><span class="comment">//输出链表</span></span><br><span class="line"><span class="keyword">for</span>(<span class="keyword">struct</span> node *t=head;t!=<span class="literal">NULL</span>;t=t-&gt;next){</span><br><span class="line">cout &lt;&lt;t-&gt;name &lt;&lt;<span class="string">" "</span> &lt;&lt;t-&gt;age &lt;&lt;endl;</span><br><span class="line">} </span><br><span class="line">cout &lt;&lt;endl;</span><br><span class="line"><span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">}</span><br></pre></td></tr></tbody></table></figure><p>然后是删除链表的一个节点，分为<strong>删除链表头</strong>、<strong>删除链表尾</strong>、<strong>删除链表中间某一节点</strong>这三种情况，需要分别考虑。</p><p><strong>值得注意的是，修改该节点的前一个节点的指针，应当从这个节点的前一个节点的前一个节点修改；修改前记得删除指针之前指向的空间。</strong></p><ol><li><p>删除链表尾</p><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//删除链表尾</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span> *j;</span><br><span class="line"><span class="keyword">for</span>(j=head;j-&gt;next-&gt;next!=q;j=j-&gt;next);</span><br><span class="line"><span class="keyword">delete</span> j-&gt;next;</span><br><span class="line">j-&gt;next=q;</span><br></pre></td></tr></tbody></table></figure></li><li><p>删除链表头</p><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//删除链表头</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span> *j=head;</span><br><span class="line">head=head-&gt;next;</span><br><span class="line"><span class="keyword">delete</span> j; </span><br></pre></td></tr></tbody></table></figure></li><li><p>删除链表第h项</p><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//删除链表第h项</span></span><br><span class="line"><span class="type">int</span> h;</span><br><span class="line">cin &gt;&gt;h; </span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span> *j=head; </span><br><span class="line"><span class="keyword">for</span>(<span class="type">int</span> i=<span class="number">0</span>;i&lt;h<span class="number">-2</span>;i++,j=j-&gt;next);</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span> *z=j-&gt;next-&gt;next;</span><br><span class="line"><span class="keyword">delete</span> j-&gt;next;</span><br><span class="line">j-&gt;next=z;</span><br></pre></td></tr></tbody></table></figure></li></ol><p>当然少不了<strong>插入链表</strong>！<strong>注意事项跟删除链表差不多</strong>。</p><ol><li><p>插入链表头</p><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//插入链表头</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span> *j=<span class="keyword">new</span> <span class="keyword">struct</span> node;</span><br><span class="line">cin &gt;&gt;j-&gt;name &gt;&gt;j-&gt;age;</span><br><span class="line">j-&gt;next=head;</span><br><span class="line">head=j;</span><br></pre></td></tr></tbody></table></figure></li><li><p>插入链表尾</p><figure class="highlight c++"><table><tbody><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//插入链表尾</span></span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span> *j=<span class="keyword">new</span> <span class="keyword">struct</span> node;</span><br><span class="line">cin &gt;&gt;j-&gt;name &gt;&gt;j-&gt;age;</span><br><span class="line">j-&gt;next=<span class="literal">NULL</span>;</span><br><span class="line"><span class="keyword">struct</span> <span class="title class_">node</span> *t;</span><br><span class="line"><span class="keyword">for</span>(t=head;t-&gt;next!=q;t=t-&gt;next);</span><br><span class="line">t-&gt;next=j;</span><br><span class="line">j-&gt;next=q;</span><br></pre></td></tr></tbody></table></figure></li><li><p>插入链表第h项</p><p>和删除链表第h项差不多，感觉使用的不多，就不给样例了。</p></li></ol>]]></content>
+      
+      
+      <categories>
+          
+          <category> 数据结构 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 链表 </tag>
+            
+            <tag> C++ </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+    
+    <entry>
+      <title>夜的回响</title>
+      <link href="/2023/04/02/first/"/>
+      <url>/2023/04/02/first/</url>
+      
+        <content type="html"><![CDATA[<p>夜晚，有星空，也有灯火，人们却在白炽灯下忘记了仰望星空的梦。星空——那来自万光年外遥远的光束终会散去，那时还会有人想要抬起头吗？如果他抬起了，还能看到什么吗？幸而，大爆炸给予宇宙光亮的同时也带给物种以思想。当他独自一人时，当他快乐、悲伤甚至是悲喜交集时，夜空，清冷的夜空，洁净的夜空，神秘的夜空，就是他们的冥想室。即使他们的肉体化为尘土，他们的思想依然在时间的浪潮中闪闪发亮，他们的声音在后来的无数时刻回响。</p><p>中国现代社会的意义是缺失的。科学与哲学这俩看似毫不相干的东西自古以来是携手并进的，而我国科学的发展的思想基础更多建立于最初的那个社会主义理想之上。苏联在上个世纪80年代就已经解体，我国社会主义的继续发展失去了一个模板。如果按照上个世纪阶级斗争的思想来看，究竟谁才是如今的敌人？我们闯出一条路，选择新时代中国特色社会主义，当年被美好的理想掩盖住的思维缺失又该如何弥补？作为中国未来的中流砥柱，我们这一代将致力于解决这一问题；作为人类的一份子，我们将为社会发展提供模板，为人类科学发展做出贡献。</p><p>夜响，一位理科生，一位OIer，一位二次元，一位哲学的初探者的写字台。</p><p><img src="/images/girls.jpg" alt="芳文社！"></p>]]></content>
+      
+      
+      <categories>
+          
+          <category> 随想 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> 解 </tag>
+            
+        </tags>
+      
+    </entry>
+    
+    
+  
+  
+</search>
