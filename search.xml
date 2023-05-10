@@ -4,13 +4,27 @@
   
     
     <entry>
-      <title>blackcleaner</title>
+      <title>去除屏幕截图黑框部分的小工具</title>
       <link href="/2023/05/10/blackcleaner/"/>
       <url>/2023/05/10/blackcleaner/</url>
       
         <content type="html"><![CDATA[]]></content>
       
       
+      <categories>
+          
+          <category> 项目 </category>
+          
+      </categories>
+      
+      
+        <tags>
+            
+            <tag> Python </tag>
+            
+            <tag> 个人小项目 </tag>
+            
+        </tags>
       
     </entry>
     
